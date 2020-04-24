@@ -1,24 +1,222 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6pf-bx-wWo">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Налаштування-->
+        <scene sceneID="klz-vf-kkG">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="G8S-72-c5i" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lH6-tX-SKH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="udS-ju-7J0"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Налаштування" image="gear" catalog="system" id="Khw-4y-dWD"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hdt-cK-bZg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1508" y="509"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zLU-YO-x80">
+            <objects>
+                <viewController id="jrH-PW-9ZL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hX1-Tx-gQw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="CEL-dy-KrV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MKV-9e-7i7">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="rf4-3Y-D6I"/>
+                        <barButtonItem key="leftBarButtonItem" title="Перевірка документів" id="JMN-JL-ZyP">
+                            <connections>
+                                <segue destination="fuw-A3-Zde" kind="show" id="TSr-qH-lv8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b4j-TG-SBw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1508" y="-207.34632683658174"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="8mU-vK-wKY">
+            <objects>
+                <tableViewController id="fuw-A3-Zde" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="nE9-lx-zb3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <sections>
+                            <tableViewSection id="4zl-zS-f5z">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gkZ-jE-rso">
+                                        <rect key="frame" x="0.0" y="18" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gkZ-jE-rso" id="8W9-ul-S2K">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ДБН В.2.2-15:2019 Житлові будинки. Основні положення." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBh-9e-3q0">
+                                                    <rect key="frame" x="16" y="1.5" width="343" height="41"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zBh-9e-3q0" firstAttribute="leading" secondItem="8W9-ul-S2K" secondAttribute="leading" constant="16" id="0gY-0r-7Ek"/>
+                                                <constraint firstItem="zBh-9e-3q0" firstAttribute="centerY" secondItem="8W9-ul-S2K" secondAttribute="centerY" id="3Or-Uh-EUi"/>
+                                                <constraint firstAttribute="trailing" secondItem="zBh-9e-3q0" secondAttribute="trailing" constant="16" id="ZI5-hl-DKs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="wyw-np-fQm" kind="show" id="8gj-Fb-xo4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="zvR-Gn-XIC">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="eUc-gg-dQH">
+                                        <rect key="frame" x="0.0" y="97.5" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eUc-gg-dQH" id="nh3-e9-PDF">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ДБН В.2.2-15:2019 Житлові будинки. Основні положення." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FW1-UK-r3O">
+                                                    <rect key="frame" x="16" y="1.5" width="343" height="41"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="FW1-UK-r3O" secondAttribute="trailing" constant="16" id="9Qn-mh-9Vm"/>
+                                                <constraint firstItem="FW1-UK-r3O" firstAttribute="centerY" secondItem="nh3-e9-PDF" secondAttribute="centerY" id="Tdn-ms-scD"/>
+                                                <constraint firstItem="FW1-UK-r3O" firstAttribute="leading" secondItem="nh3-e9-PDF" secondAttribute="leading" constant="16" id="WD9-a7-M9v"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="fuw-A3-Zde" id="YA1-uI-Pck"/>
+                            <outlet property="delegate" destination="fuw-A3-Zde" id="t6c-J5-r4h"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="XOP-m3-yEv">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="yxG-mo-V1s"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HXU-QR-pcl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2248.8000000000002" y="-207.34632683658174"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ERJ-ah-CII">
+            <objects>
+                <viewController id="wyw-np-fQm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FsK-by-gxD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="kbJ-Rx-Bav"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PFR-Za-qlN">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="feL-s2-A2t"/>
+                        <barButtonItem key="rightBarButtonItem" title="Переглянути документ" id="3td-y4-FUK">
+                            <connections>
+                                <segue destination="lUu-NZ-xtt" kind="show" id="kps-RL-i1O"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ht-u9-gZn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3041" y="-863"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zM6-mR-tpI">
+            <objects>
+                <viewController id="lUu-NZ-xtt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="13Q-k1-FYn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KPB-QR-4AL">
+                                <rect key="frame" x="10" y="54" width="355" height="554"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <mutableString key="text">Ключові слова: нормативні документи, житло І і ІІ категорії, нормативні вимоги, загальні положення, архітектурно-планувальні та конструктивні рішення, об’ємно-планувальна структура, елементи будинку, квартири, спеціалізоване житло, нежитлові приміщення, склад та площа приміщень, інженерне обладнання, пожежна безпека, безпека та доступність у використанні, санітарно-гігієнічні вимоги, довговічність і ремонтопридатність, енергозбереження, дода</mutableString>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KPB-QR-4AL" firstAttribute="leading" secondItem="yt3-iA-KFi" secondAttribute="leading" constant="10" id="30T-9d-3Bt"/>
+                            <constraint firstItem="KPB-QR-4AL" firstAttribute="top" secondItem="yt3-iA-KFi" secondAttribute="top" constant="10" id="F9N-d4-kOB"/>
+                            <constraint firstItem="yt3-iA-KFi" firstAttribute="trailing" secondItem="KPB-QR-4AL" secondAttribute="trailing" constant="10" id="FXw-zs-QFg"/>
+                            <constraint firstItem="yt3-iA-KFi" firstAttribute="bottom" secondItem="KPB-QR-4AL" secondAttribute="bottom" constant="10" id="KuE-k9-jai"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yt3-iA-KFi"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RAt-KN-JS4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1rh-b2-dKk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3847" y="-863"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="gf1-sS-Yzp">
+            <objects>
+                <tabBarController id="6pf-bx-wWo" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hFk-Gb-cLt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Dbn-ro-MaK" kind="relationship" relationship="viewControllers" id="vXW-6m-j2Q"/>
+                        <segue destination="G8S-72-c5i" kind="relationship" relationship="viewControllers" id="qdT-SO-lWW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1LS-1e-5FG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-349" y="116"/>
+        </scene>
+        <!--ДБН-->
+        <scene sceneID="8yF-cX-q87">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dbn-ro-MaK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="ДБН" image="doc.fill" catalog="system" id="6nr-Y4-rvX"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x0O-k8-Xhh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jrH-PW-9ZL" kind="relationship" relationship="rootViewController" id="r65-AB-plP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CpN-8r-70i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="568.79999999999995" y="-207.34632683658174"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="doc.fill" catalog="system" width="115" height="128"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
+    </resources>
 </document>
