@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6pf-bx-wWo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dV6-eB-fca">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -77,6 +77,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="zBh-9e-3q0" secondAttribute="trailing" constant="16" id="ZI5-hl-DKs"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <connections>
                                             <segue destination="wyw-np-fQm" kind="show" id="8gj-Fb-xo4"/>
                                         </connections>
@@ -122,14 +123,80 @@
             </objects>
             <point key="canvasLocation" x="2248.8000000000002" y="-207.34632683658174"/>
         </scene>
-        <!--View Controller-->
+        <!--DBN_B_2_2_15_2019-->
         <scene sceneID="ERJ-ah-CII">
             <objects>
-                <viewController id="wyw-np-fQm" sceneMemberID="viewController">
+                <viewController id="wyw-np-fQm" customClass="DBN_B_2_2_15_2019" customModule="Architect_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FsK-by-gxD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="6wl-aK-CNT">
+                                <rect key="frame" x="16" y="60" width="343" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Висота будівлі (м)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNf-K7-MiM">
+                                        <rect key="frame" x="0.0" y="0.0" width="153" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AW0-T4-Zj2">
+                                        <rect key="frame" x="169" y="0.0" width="174" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="AW0-T4-Zj2" firstAttribute="leading" secondItem="QNf-K7-MiM" secondAttribute="trailing" constant="16" id="PNr-U6-jYP"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="GkX-dv-TeX">
+                                <rect key="frame" x="16" y="110" width="343" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Наскрізні проходи , відстань (м) " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMF-Zf-vwz">
+                                        <rect key="frame" x="0.0" y="0.0" width="277" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GLc-Gd-hnr">
+                                        <rect key="frame" x="293" y="0.0" width="50" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="GLc-Gd-hnr" firstAttribute="leading" secondItem="jMF-Zf-vwz" secondAttribute="trailing" constant="16" id="7dn-U7-R1L"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKC-1D-9im">
+                                <rect key="frame" x="118.5" y="568" width="138" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Перевірити дані"/>
+                                <connections>
+                                    <action selector="checkData:" destination="wyw-np-fQm" eventType="touchUpInside" id="Da0-7Q-MtA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Результати перевірки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIA-Ms-kJv">
+                                <rect key="frame" x="95.5" y="526.5" width="184" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rKC-1D-9im" firstAttribute="centerX" secondItem="kbJ-Rx-Bav" secondAttribute="centerX" id="0pf-Xd-aKa"/>
+                            <constraint firstItem="GkX-dv-TeX" firstAttribute="leading" secondItem="kbJ-Rx-Bav" secondAttribute="leading" constant="16" id="613-fc-Tbn"/>
+                            <constraint firstItem="6wl-aK-CNT" firstAttribute="leading" secondItem="kbJ-Rx-Bav" secondAttribute="leading" constant="16" id="7Nh-lV-aTb"/>
+                            <constraint firstItem="kbJ-Rx-Bav" firstAttribute="trailing" secondItem="6wl-aK-CNT" secondAttribute="trailing" constant="16" id="LsX-ff-tqU"/>
+                            <constraint firstItem="kbJ-Rx-Bav" firstAttribute="bottom" secondItem="rKC-1D-9im" secondAttribute="bottom" constant="16" id="fzI-yM-sAK"/>
+                            <constraint firstItem="6wl-aK-CNT" firstAttribute="top" secondItem="kbJ-Rx-Bav" secondAttribute="top" constant="16" id="kd2-eQ-Ply"/>
+                            <constraint firstItem="kbJ-Rx-Bav" firstAttribute="trailing" secondItem="GkX-dv-TeX" secondAttribute="trailing" constant="16" id="mUl-ie-IF8"/>
+                            <constraint firstItem="gIA-Ms-kJv" firstAttribute="centerX" secondItem="kbJ-Rx-Bav" secondAttribute="centerX" id="mcg-1F-yxy"/>
+                            <constraint firstItem="rKC-1D-9im" firstAttribute="top" secondItem="gIA-Ms-kJv" secondAttribute="bottom" constant="20" id="qgm-02-MeE"/>
+                            <constraint firstItem="GkX-dv-TeX" firstAttribute="top" secondItem="6wl-aK-CNT" secondAttribute="bottom" constant="16" id="zY8-gJ-1Vv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kbJ-Rx-Bav"/>
                     </view>
                     <navigationItem key="navigationItem" id="PFR-Za-qlN">
@@ -140,10 +207,15 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ThroughAislesDistance" destination="GLc-Gd-hnr" id="H9S-TU-mV9"/>
+                        <outlet property="buildingHeight" destination="AW0-T4-Zj2" id="9MK-UV-udJ"/>
+                        <outlet property="result" destination="gIA-Ms-kJv" id="Za6-4H-uVC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ht-u9-gZn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3041" y="-863"/>
+            <point key="canvasLocation" x="3040.8000000000002" y="-863.1184407796103"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zM6-mR-tpI">
@@ -156,7 +228,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KPB-QR-4AL">
                                 <rect key="frame" x="10" y="54" width="355" height="554"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">Ключові слова: нормативні документи, житло І і ІІ категорії, нормативні вимоги, загальні положення, архітектурно-планувальні та конструктивні рішення, об’ємно-планувальна структура, елементи будинку, квартири, спеціалізоване житло, нежитлові приміщення, склад та площа приміщень, інженерне обладнання, пожежна безпека, безпека та доступність у використанні, санітарно-гігієнічні вимоги, довговічність і ремонтопридатність, енергозбереження, дода</mutableString>
+                                <string key="text">Ключові слова: нормативні документи, житло І і ІІ категорії, нормативні вимоги, загальні положення, архітектурно-планувальні та конструктивні рішення, об’ємно-планувальна структура, елементи будинку, квартири, спеціалізоване житло, нежитлові приміщення, склад та площа приміщень, інженерне обладнання, пожежна безпека, безпека та доступність у використанні, санітарно-гігієнічні вимоги, довговічність і ремонтопридатність, енергозбереження, дода</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -176,6 +248,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1rh-b2-dKk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3847" y="-863"/>
+        </scene>
+        <!--Animation Controller-->
+        <scene sceneID="3ZW-63-mAe">
+            <objects>
+                <viewController id="dV6-eB-fca" customClass="AnimationController" customModule="Architect_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fZf-sE-9zD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="GPq-1d-YYZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nJd-4B-789" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1188" y="116"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gf1-sS-Yzp">
