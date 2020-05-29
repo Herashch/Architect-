@@ -13,12 +13,14 @@ class DBN_B_2_2_15_2019: UIViewController {
     var textResult = ""
     
     @IBOutlet var scrollView: UIScrollView!
+    
     @IBOutlet var buildengHeightLabel: UILabel!
     @IBOutlet var throughAislesDistanceLabel: UILabel!
     @IBOutlet var WhereIsTheLivingRoomLabel: UILabel!
     @IBOutlet var residentialHeightLabel: UILabel!
     @IBOutlet var heightCeilingFloorLabel: UILabel!
     @IBOutlet var heightOfOtherRoomsLabel: UILabel!
+    
     @IBOutlet var buildingHeight: UITextField!
     @IBOutlet var ThroughAislesDistance: UITextField!
     @IBOutlet var WhereIsTheLivingRoom: UISegmentedControl!
@@ -38,6 +40,7 @@ class DBN_B_2_2_15_2019: UIViewController {
         buildingHeight.delegate = self
         ThroughAislesDistance.delegate = self
         residentialHeight.delegate = self
+        heightOfOtherRooms.delegate = self
         
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.touch))
         recognizer.numberOfTapsRequired = 1
@@ -45,8 +48,11 @@ class DBN_B_2_2_15_2019: UIViewController {
         scrollView.addGestureRecognizer(recognizer)
         
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
         
     }
+    
     
     @IBAction func checkData(_ sender: Any) {
         textResult = ""
@@ -161,3 +167,23 @@ extension DBN_B_2_2_15_2019: UITextFieldDelegate {
     }
 
 }
+
+extension DBN_B_2_2_15_2019 {
+    @objc func keyboardWillShow(notification:NSNotification){
+
+        let userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+
+        var contentInset:UIEdgeInsets = self.scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height + 20
+        scrollView.contentInset = contentInset
+    }
+
+    @objc func keyboardWillHide(notification:NSNotification){
+
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInset
+    }
+}
+
