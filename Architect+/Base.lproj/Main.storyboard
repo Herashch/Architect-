@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6pf-bx-wWo">
-    <device id="retina4_7" orientation="portrait" appearance="dark"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6pf-bx-wWo">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -201,7 +201,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="UKE-fV-6WC">
-                                        <rect key="frame" x="16" y="297" width="343" height="270.5"/>
+                                        <rect key="frame" x="16" y="297" width="343" height="329.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4. Яка середньомісячна температура в липні ?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFk-CB-BOj">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
@@ -216,19 +216,25 @@
                                                     <segment title="Менше"/>
                                                 </segments>
                                             </segmentedControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Висота житлового приміщення від підлоги до стелі (м)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVr-gi-0Wg">
+                                                <rect key="frame" x="0.0" y="106" width="343" height="43"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iDm-lQ-1jw">
-                                                <rect key="frame" x="0.0" y="106" width="343" height="34"/>
+                                                <rect key="frame" x="0.0" y="165" width="343" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Висота внутрішньоквартирних коридорів, санвузлів та інших підсобних приміщень (м)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbG-Vj-OfV">
-                                                <rect key="frame" x="0.0" y="156" width="343" height="64.5"/>
+                                                <rect key="frame" x="0.0" y="215" width="343" height="64.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LDq-Zc-fdP">
-                                                <rect key="frame" x="0.0" y="236.5" width="343" height="34"/>
+                                                <rect key="frame" x="0.0" y="295.5" width="343" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
@@ -284,6 +290,7 @@
                         <outlet property="WhereIsTheLivingRoomLabel" destination="Yre-3X-hnp" id="91B-BS-hKd"/>
                         <outlet property="buildengHeightLabel" destination="QNf-K7-MiM" id="vG7-PG-8fC"/>
                         <outlet property="buildingHeight" destination="AW0-T4-Zj2" id="9MK-UV-udJ"/>
+                        <outlet property="heightCeilingFloorLabel" destination="hVr-gi-0Wg" id="ZmP-ys-ysu"/>
                         <outlet property="heightOfOtherRooms" destination="LDq-Zc-fdP" id="U91-iy-lSj"/>
                         <outlet property="heightOfOtherRoomsLabel" destination="vbG-Vj-OfV" id="zU8-ln-Djn"/>
                         <outlet property="residentialHeight" destination="iDm-lQ-1jw" id="CqU-hh-ppd"/>

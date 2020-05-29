@@ -13,14 +13,12 @@ class DBN_B_2_2_15_2019: UIViewController {
     var textResult = ""
     
     @IBOutlet var scrollView: UIScrollView!
-    
     @IBOutlet var buildengHeightLabel: UILabel!
     @IBOutlet var throughAislesDistanceLabel: UILabel!
     @IBOutlet var WhereIsTheLivingRoomLabel: UILabel!
     @IBOutlet var residentialHeightLabel: UILabel!
+    @IBOutlet var heightCeilingFloorLabel: UILabel!
     @IBOutlet var heightOfOtherRoomsLabel: UILabel!
-    
-    
     @IBOutlet var buildingHeight: UITextField!
     @IBOutlet var ThroughAislesDistance: UITextField!
     @IBOutlet var WhereIsTheLivingRoom: UISegmentedControl!
@@ -60,64 +58,69 @@ class DBN_B_2_2_15_2019: UIViewController {
     }
     
     func Paragraph1() {
+        buildengHeightLabel.textColor = .label
         guard let operand = Double(buildingHeight.text!) else {
             return
         }
         if operand > 73.5 {
             buildengHeightLabel.textColor = .red
             textResult += " 1,"
-        } else {
-            buildengHeightLabel.textColor = .label
         }
     }
     
     func Paragraph5_2() {
+        throughAislesDistanceLabel.textColor = .label
         guard let operand = Double(ThroughAislesDistance.text!) else {
             return
         }
         if operand > 100 {
             throughAislesDistanceLabel.textColor = .red
             textResult += " 5.2,"
-        } else {
-            throughAislesDistanceLabel.textColor = .label
         }
     }
     
     func Paragraph5_3() {
+        WhereIsTheLivingRoomLabel.textColor = .label
         if WhereIsTheLivingRoom.selectedSegmentIndex != 3 {
             WhereIsTheLivingRoomLabel.textColor = .red
             textResult += " 5.3,"
-        } else {
-            WhereIsTheLivingRoomLabel.textColor = .label
         }
     }
     
     func Paragraph5_6() {
+        residentialHeightLabel.textColor = .label
+        heightCeilingFloorLabel.textColor = .label
+        Paragraph5_6two()
         guard let operand = Double(residentialHeight.text!) else {
             return
         }
         if residentialHeightSegmentedControl.selectedSegmentIndex == 0 {
-            if operand >= 2.7 {
-                residentialHeightLabel.textColor = .label
-            } else {
+            if operand < 2.7 {
                 residentialHeightLabel.textColor = .red
-                textResult += " 5.6,"
+                heightCeilingFloorLabel.textColor = .red
+                if !textResult.contains(" 5.6,") {
+                    textResult += " 5.6,"
+                }
             }
         } else {
-            if operand >= 2.5 {
-                residentialHeightLabel.textColor = .label
-            } else {
+            if operand < 2.5 {
                 residentialHeightLabel.textColor = .red
-                textResult += " 5.6,"
+                heightCeilingFloorLabel.textColor = .red
+                if !textResult.contains(" 5.6,") {
+                    textResult += " 5.6,"
+                }
             }
         }
+    }
+    
+    func Paragraph5_6two() {
+        heightOfOtherRoomsLabel.textColor = .label
         guard let operand2 = Double(heightOfOtherRooms.text!) else {
             return
         }
-        if operand2 >= 2.1 {
-            heightOfOtherRoomsLabel.textColor = .label
-        } else {
+        if operand2 < 2.1 {
             heightOfOtherRoomsLabel.textColor = .red
+            residentialHeightLabel.textColor = .red
             if !textResult.contains(" 5.6,") {
                 textResult += " 5.6,"
             }
@@ -134,7 +137,6 @@ class DBN_B_2_2_15_2019: UIViewController {
             result.text = "Порушення пункту " + textResult + "!"
         }
     }
-
 }
 
 extension DBN_B_2_2_15_2019: UITextFieldDelegate {
