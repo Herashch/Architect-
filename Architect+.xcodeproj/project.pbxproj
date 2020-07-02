@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1951AF982B5B6067F1C8D7A1 /* Pods_Architect_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0820127162D5AAB08BAB3E58 /* Pods_Architect_.framework */; };
+		C12A830424AE3C58009792A0 /* UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12A830324AE3C58009792A0 /* UITextFieldDelegate.swift */; };
+		C12A830824AE43C4009792A0 /* KeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12A830724AE43C4009792A0 /* KeyBoard.swift */; };
+		C12A830A24AE45B2009792A0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12A830924AE45B2009792A0 /* Extensions.swift */; };
 		C13729D5245DDB7A005EF652 /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13729D4245DDB7A005EF652 /* AnimationController.swift */; };
 		C1ACE7922458D55B006FEED5 /* DBN_B_2_2_15_2019.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ACE7912458D55B006FEED5 /* DBN_B_2_2_15_2019.swift */; };
 		C1F558A7245DE87100E57D9E /* home.json in Resources */ = {isa = PBXBuildFile; fileRef = C1F558A6245DE87100E57D9E /* home.json */; };
@@ -21,6 +24,10 @@
 /* Begin PBXFileReference section */
 		0820127162D5AAB08BAB3E58 /* Pods_Architect_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architect_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACBB73B4B1BFE06577EC61F2 /* Pods-Architect+.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architect+.release.xcconfig"; path = "Target Support Files/Pods-Architect+/Pods-Architect+.release.xcconfig"; sourceTree = "<group>"; };
+		C12A82FD24AE27DD009792A0 /* Architect+.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Architect+.entitlements"; sourceTree = "<group>"; };
+		C12A830324AE3C58009792A0 /* UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldDelegate.swift; sourceTree = "<group>"; };
+		C12A830724AE43C4009792A0 /* KeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoard.swift; sourceTree = "<group>"; };
+		C12A830924AE45B2009792A0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C13729D4245DDB7A005EF652 /* AnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = "<group>"; };
 		C1ACE7912458D55B006FEED5 /* DBN_B_2_2_15_2019.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBN_B_2_2_15_2019.swift; sourceTree = "<group>"; };
 		C1F558A6245DE87100E57D9E /* home.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = home.json; sourceTree = "<group>"; };
@@ -54,6 +61,50 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C12A82FE24AE2AA9009792A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C12A82FF24AE2ABE009792A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C1F66B9A24530A3300CF65D4 /* Main.storyboard */,
+				C1F66B9F24530A3500CF65D4 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C12A830024AE2AD2009792A0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C12A830124AE3BE0009792A0 /* DBN_B_2_2_15_2019 */,
+				C13729D4245DDB7A005EF652 /* AnimationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C12A830124AE3BE0009792A0 /* DBN_B_2_2_15_2019 */ = {
+			isa = PBXGroup;
+			children = (
+				C12A830224AE3C02009792A0 /* Extensions */,
+				C1ACE7912458D55B006FEED5 /* DBN_B_2_2_15_2019.swift */,
+			);
+			path = DBN_B_2_2_15_2019;
+			sourceTree = "<group>";
+		};
+		C12A830224AE3C02009792A0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C12A830324AE3C58009792A0 /* UITextFieldDelegate.swift */,
+				C12A830724AE43C4009792A0 /* KeyBoard.swift */,
+				C12A830924AE45B2009792A0 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C1F66B8824530A3300CF65D4 = {
 			isa = PBXGroup;
 			children = (
@@ -75,15 +126,15 @@
 		C1F66B9324530A3300CF65D4 /* Architect+ */ = {
 			isa = PBXGroup;
 			children = (
+				C12A82FD24AE27DD009792A0 /* Architect+.entitlements */,
 				C1F558A6245DE87100E57D9E /* home.json */,
 				C1F66B9424530A3300CF65D4 /* AppDelegate.swift */,
 				C1F66B9624530A3300CF65D4 /* SceneDelegate.swift */,
-				C1F66B9A24530A3300CF65D4 /* Main.storyboard */,
 				C1F66B9D24530A3500CF65D4 /* Assets.xcassets */,
-				C1F66B9F24530A3500CF65D4 /* LaunchScreen.storyboard */,
+				C12A82FE24AE2AA9009792A0 /* Model */,
+				C12A82FF24AE2ABE009792A0 /* View */,
+				C12A830024AE2AD2009792A0 /* Controller */,
 				C1F66BA224530A3500CF65D4 /* Info.plist */,
-				C1ACE7912458D55B006FEED5 /* DBN_B_2_2_15_2019.swift */,
-				C13729D4245DDB7A005EF652 /* AnimationController.swift */,
 			);
 			path = "Architect+";
 			sourceTree = "<group>";
@@ -213,10 +264,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C12A830424AE3C58009792A0 /* UITextFieldDelegate.swift in Sources */,
 				C13729D5245DDB7A005EF652 /* AnimationController.swift in Sources */,
+				C12A830824AE43C4009792A0 /* KeyBoard.swift in Sources */,
 				C1ACE7922458D55B006FEED5 /* DBN_B_2_2_15_2019.swift in Sources */,
 				C1F66B9524530A3300CF65D4 /* AppDelegate.swift in Sources */,
 				C1F66B9724530A3300CF65D4 /* SceneDelegate.swift in Sources */,
+				C12A830A24AE45B2009792A0 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,14 +415,17 @@
 			baseConfigurationReference = F088CDAE56A5530871CF1987 /* Pods-Architect+.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Architect+/Architect+.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46X85M39K4;
 				INFOPLIST_FILE = "Architect+/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ivanherashchenko.Architect-";
+				PRODUCT_BUNDLE_IDENTIFIER = ivanherashchenko;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -379,14 +436,17 @@
 			baseConfigurationReference = ACBB73B4B1BFE06577EC61F2 /* Pods-Architect+.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Architect+/Architect+.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46X85M39K4;
 				INFOPLIST_FILE = "Architect+/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ivanherashchenko.Architect-";
+				PRODUCT_BUNDLE_IDENTIFIER = ivanherashchenko;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

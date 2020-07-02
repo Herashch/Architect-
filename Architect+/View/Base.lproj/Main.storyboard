@@ -225,7 +225,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iDm-lQ-1jw">
                                                 <rect key="frame" x="0.0" y="165" width="343" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Висота внутрішньоквартирних коридорів, санвузлів та інших підсобних приміщень (м)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbG-Vj-OfV">
                                                 <rect key="frame" x="0.0" y="215" width="343" height="64.5"/>
@@ -236,7 +236,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LDq-Zc-fdP">
                                                 <rect key="frame" x="0.0" y="295.5" width="343" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -340,7 +340,7 @@
         <!--Animation Controller-->
         <scene sceneID="3ZW-63-mAe">
             <objects>
-                <viewController id="dV6-eB-fca" customClass="AnimationController" customModule="Architect_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" id="dV6-eB-fca" customClass="AnimationController" customModule="Architect_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fZf-sE-9zD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -350,12 +350,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJd-4B-789" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1188" y="116"/>
+            <point key="canvasLocation" x="-1204" y="116"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gf1-sS-Yzp">
             <objects>
                 <tabBarController id="6pf-bx-wWo" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="XKc-FD-WWg"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hFk-Gb-cLt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

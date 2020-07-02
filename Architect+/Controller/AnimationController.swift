@@ -12,7 +12,6 @@ import Lottie
 class AnimationController: UIViewController {
     
     let animationView = AnimationView()
-    let df = UIView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,5 +28,5 @@ class AnimationController: UIViewController {
         animationView.play()
         view.addSubview(animationView)
     }
-
+    
 }

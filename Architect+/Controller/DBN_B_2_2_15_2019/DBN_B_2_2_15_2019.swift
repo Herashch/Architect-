@@ -37,10 +37,7 @@ class DBN_B_2_2_15_2019: UIViewController {
         
         UILabel.appearance(whenContainedInInstancesOf: [UISegmentedControl.self]).numberOfLines = 0
         
-        buildingHeight.delegate = self
-        ThroughAislesDistance.delegate = self
-        residentialHeight.delegate = self
-        heightOfOtherRooms.delegate = self
+        delegates()
         
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.touch))
         recognizer.numberOfTapsRequired = 1
@@ -52,6 +49,7 @@ class DBN_B_2_2_15_2019: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
         
     }
+    
     
     
     @IBAction func checkData(_ sender: Any) {
@@ -133,6 +131,10 @@ class DBN_B_2_2_15_2019: UIViewController {
         }
     }
     
+    func Paragraph5_7() {
+        
+    }
+    
     func checkResult() {
         if textResult == "" {
             result.textColor = .green
@@ -145,45 +147,4 @@ class DBN_B_2_2_15_2019: UIViewController {
     }
 }
 
-extension DBN_B_2_2_15_2019: UITextFieldDelegate {
-    
-    @objc func touch() {
-        self.view.endEditing(true)
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if (textField.text!.count == 0) && (string == ".") {
-            return false
-        }
-        let dotsCount = textField.text!.components(separatedBy: ".").count - 1
-        if (dotsCount > 0) && (string == ".") {
-            return false
-        }
-        return true
-    }
-
-}
-
-extension DBN_B_2_2_15_2019 {
-    @objc func keyboardWillShow(notification:NSNotification){
-
-        let userInfo = notification.userInfo!
-        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
-        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
-
-        var contentInset:UIEdgeInsets = self.scrollView.contentInset
-        contentInset.bottom = keyboardFrame.size.height + 20
-        scrollView.contentInset = contentInset
-    }
-
-    @objc func keyboardWillHide(notification:NSNotification){
-
-        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
-        scrollView.contentInset = contentInset
-    }
-}
 
